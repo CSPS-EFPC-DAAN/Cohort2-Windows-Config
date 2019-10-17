@@ -1,0 +1,5 @@
+Set-ExecutionPolicy Unrestricted
+
+Install-Module PSLogging
+
+C:\DigitalAcademy\InstallFiles\DigitalAcademy-Installation.ps1 -InstallFiles "C:\DigitalAcademy\InstallFiles"
