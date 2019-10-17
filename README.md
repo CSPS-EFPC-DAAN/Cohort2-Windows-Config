@@ -38,7 +38,7 @@ select [A] Yes to All
 ```sh
 C:\DigitalAcademy\InstallFiles\DigitalAcademy-Installation.ps1 -InstallFiles "c:\DigitalAcademy\InstallFiles"
 ```
-* Select Y to restart workstation
+* Restart workstation once complete
 * DONE!
 
 [dillinger.io]: <https://dillinger.io/>
