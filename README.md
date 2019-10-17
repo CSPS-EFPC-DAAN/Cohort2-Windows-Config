@@ -3,6 +3,7 @@
 These configuration files are in support of the training courses the **Canada School of Public Service (CSPS) Digital Academy (DA) / École de la fonction publique du Canada (EFPC) Académie du numérique (AN)**, are hosting starting November, 2019.
 
 **Acknowledgements**
+
 Script template from [9to5IT/PS_Script_Template_V2_Logs.ps1]. This README.md was created using [dillinger.io]
 
 # Files
@@ -37,7 +38,7 @@ select [A] Yes to All
 ```sh
 C:\DigitalAcademy\InstallFiles\DigitalAcademy-Installation.ps1 -InstallFiles "c:\DigitalAcademy\InstallFiles"
 ```
-* Restart workstation once complete
+* Select Y to restart workstation
 * DONE!
 
 [dillinger.io]: <https://dillinger.io/>

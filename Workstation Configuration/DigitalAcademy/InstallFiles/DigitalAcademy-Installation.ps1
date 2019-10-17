@@ -8,6 +8,7 @@
 .DESCRIPTION
   Sets: Power Plan, Time Zone, Desktop Wallpaper 
   Installs: Chrome, Slack Desktop
+  Restarts workstation
 
 .PARAMETER InstallFiles
   Folder where installation files are
@@ -23,6 +24,11 @@
   Author:         Cory Dignard
   Creation Date:  October 17, 2019
   Purpose/Change: Initial script development
+
+  Version:        1.1
+  Author:         Cory Dignard
+  Creation Date:  October 17, 2019
+  Purpose/Change: Added restart prompt
 
 
 .EXAMPLE
@@ -47,7 +53,7 @@ Import-Module PSLogging
 #----------------------------------------------------------[Declarations]----------------------------------------------------------
 
 #Script Version
-$sScriptVersion = '1.0'
+$sScriptVersion = '1.1'
 
 #Log File Info
 $sLogPath = $InstallFiles
@@ -116,3 +122,5 @@ Write-Message "Completed"
 Write-Message "All tasks completed."
 
 Stop-Log -LogPath $sLogFile
+
+Restart-Computer -Confirm
