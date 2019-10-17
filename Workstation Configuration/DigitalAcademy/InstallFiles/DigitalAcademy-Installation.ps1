@@ -7,7 +7,7 @@
 
 .DESCRIPTION
   Sets: Power Plan, Time Zone, Desktop Wallpaper 
-  Installs: Chrome, Slack Desktop
+  Installs: Chrome, Slack, Zoom
   Restarts workstation
 
 .PARAMETER InstallFiles
@@ -29,6 +29,11 @@
   Author:         Cory Dignard
   Creation Date:  October 17, 2019
   Purpose/Change: Added restart prompt
+
+  Version:        1.2
+  Author:         Cory Dignard
+  Creation Date:  October 17, 2019Added install for Zoom and removed restart prompt
+  Purpose/Change: Added install for Zoom and removed restart prompt
 
 
 .EXAMPLE
@@ -53,7 +58,7 @@ Import-Module PSLogging
 #----------------------------------------------------------[Declarations]----------------------------------------------------------
 
 #Script Version
-$sScriptVersion = '1.1'
+$sScriptVersion = '1.2'
 
 #Log File Info
 $sLogPath = $InstallFiles
@@ -111,6 +116,7 @@ Write-Message "Completed"
 Write-Message "Installing Applications"
 InstallSoftware "Chrome" "msiexec" "/i $InstallFiles\GoogleChromeStandaloneEnterprise64.msi /q"
 InstallSoftware "Slack" "$InstallFiles\SlackSetup.exe" "/silent"
+InstallSoftware "Zoom" "msiexec" "/i $InstallFiles\ZoomInstallerFull.msi /quiet /qn /norestart /log install.log"
 Write-Message "Completed"
 
 Write-Message "Set Desktop Wallpaper"
@@ -122,5 +128,3 @@ Write-Message "Completed"
 Write-Message "All tasks completed."
 
 Stop-Log -LogPath $sLogFile
-
-Restart-Computer -Confirm
